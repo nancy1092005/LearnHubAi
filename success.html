@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Message Sent</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<header>
+    <h1>LearnHub AI</h1>
+
+    <nav>
+        <a href="/">Home</a>
+        <a href="/about">About</a>
+        <a href="/courses">Courses</a>
+        <a href="/contact">Contact</a>
+    </nav>
+</header>
+
+<section class="about-section">
+
+    <h2>Message Sent Successfully!</h2>
+
+    <h3>Name</h3>
+    <p>{{ name }}</p>
+
+    <h3>Email</h3>
+    <p>{{ email }}</p>
+
+    <h3>Message</h3>
+    <p>{{ message }}</p>
+
+</section>
+
+<footer>
+    <p>© 2026 LearnHub AI</p>
+</footer>
+
+</body>
+</html>

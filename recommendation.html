@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AI Recommendation</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<header>
+    <h1>LearnHub AI</h1>
+
+    <nav>
+        <a href="/">Home</a>
+        <a href="/about">About</a>
+        <a href="/courses">Courses</a>
+        <a href="/contact">Contact</a>
+    </nav>
+</header>
+
+<section class="recommendation-section">
+
+    <h2>{{ course }}</h2>
+
+    <h3>Recommended Book</h3>
+    <p>{{ book }}</p>
+
+    <h3>Recommended YouTube Channel</h3>
+
+    <a href="{{ link }}" target="_blank">
+        Visit Channel
+    </a>
+
+</section>
+
+<footer>
+    <p>© 2026 LearnHub AI</p>
+</footer>
+
+</body>
+</html>

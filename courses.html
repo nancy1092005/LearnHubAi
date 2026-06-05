@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Courses</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<header>
+    <h1>LearnHub AI</h1>
+
+    <nav>
+        <a href="/">Home</a>
+        <a href="/about">About</a>
+        <a href="/courses">Courses</a>
+        <a href="/contact">Contact</a>
+    </nav>
+</header>
+
+<section class="courses-section">
+
+    <h2>Popular Courses</h2>
+
+    <a href="/courses/python" style="text-decoration: none;">
+    <div class="card">
+        <h3>Python Programming</h3>
+        <p>Learn Python from beginner to advanced level.</p>
+    </div>
+    </a>
+
+    <a href="/courses/web" style="text-decoration: none;">
+    <div class="card">
+        <h3>Web Development</h3>
+        <p>Learn HTML, CSS, JavaScript and Flask.</p>
+    </div>
+    </a>
+
+    <a href="/courses/ai" style="text-decoration: none;">
+    <div class="card">
+        <h3>Artificial Intelligence</h3>
+        <p>Learn AI and Machine Learning concepts.</p>
+    </div>
+    </a>
+
+    <h2>AI Course Recommendation</h2>
+
+    <select id="interest">
+        <option value="Programming">Programming</option>
+        <option value="Web Development">Web Development</option>
+        <option value="Artificial Intelligence">Artificial Intelligence</option>
+    </select>
+
+    <br><br>
+
+    <button onclick="openRecommendation()">
+Get Recommendation
+</button>
+
+    <p id="result"></p>
+
+</section>
+
+<footer>
+    <p>© 2026 LearnHub AI</p>
+</footer>
+
+<<script>
+function openRecommendation(){
+
+    var interest =
+    document.getElementById("interest").value;
+
+    window.location.href =
+    "/recommend?interest=" + encodeURIComponent(interest);
+}
+</script>
+</body>
+</html>
